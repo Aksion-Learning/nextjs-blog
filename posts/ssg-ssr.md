@@ -1,19 +1,24 @@
 ---
-title: "When to Use Static Generation v.s. Server-side Rendering"
-date: "2020-01-02"
+title: "How to Make a Composition Service for Twilio Video with Node.js"
+date: "2020-12-25"
 ---
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+We will build a service that will handle recordings of many video calls. These calls will be processed, their audio files extracted, and finally, uploaded to cloud storage for access by end-users.  
+For this purpose, we will use a queueing system which will deal with two different parts. The first part will be responsible for receiving video room metadata as soon as a video call ends.  
+The second part will be responsible for processing related audio recordings.
+The duration of this second part may be between 30 minutes and 24 hours for each composition.  
+This queueing system will take care of the expected delays and failures of each part of the service.
 
-You can use Static Generation for many types of pages, including:
+### The Technologies Used to Build the Service:
 
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
+**Data and File API:**
 
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
+Twilio for video calls, recording, and composition backups.  
+Google Drive for extracted recordings.
 
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
+**Queue Management:**
 
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
+Redis for queue management.  
+Bull for queueing with NodeJS.  
+Taskforce. sh for monitoring queues.
+for full article [visit Medium](https://medium.com/@rasha.abdulrazzak/how-to-make-a-composition-service-for-twilio-video-with-node-js-feb2ba851d6b)

@@ -1,11 +1,24 @@
 ---
-title: "Two Forms of Pre-rendering"
-date: "2020-01-01"
+title: "How to Write a README.MD File for Your Project"
+date: "2021-01-26"
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+A README.MD file is an important file to include in your project. It helps others to understand your project clearly. Also, it’s a sign of a good project. Nowadays, it is almost mandatory to write a README file for any project.
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+#### So What is a Readme File?
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+It’s a text file that includes the necessary information about your project to be understandable. You can write it in any text editor. But nowadays, it is preferable to write it in a markdown language.
+
+#### What Does a Readme File include?
+
+- Description of the project.
+- Table of the content.
+- Examples and screenshots of the outputs.
+- The technologies used with links to their websites.
+- Information about how to use the repository.
+- Resources.
+- How to set up the repository locally.
+- It will be great to have an online website that users check the result.
+- License.
+  Also, a significant section will be how others can contribute to your repository.
+  for full article [visit Medium](https://medium.com/@rasha.abdulrazzak/how-to-write-a-readme-md-file-for-your-project-82ffd02c4d9b)
